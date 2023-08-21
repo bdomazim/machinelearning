@@ -14817,7 +14817,7 @@ memory usage: 74.0+ KB
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The table above shows the number of non-null values and the dtype of each column in the dataset. “CheeseId” column is dropped as it provides no information for machine learning. "FlavourEn," "CharacteristicsEn," "RindTypeEn," and "CheeseName" contain more than 20% null values, so they are excluded. The code below demonstrates this.</p>
+<p>The table above displays the count of non-null values and the data type (dtype) of each column in the dataset. The “CheeseId” column has been removed as it does not provide any useful information for machine learning. Additionally, the columns "FlavourEn," "CharacteristicsEn," "RindTypeEn," and "CheeseName" contain more than 20% null values, resulting in their exclusion from the project. The following code demonstrates how this dropping process is carried out.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15015,7 +15015,7 @@ memory usage: 74.0+ KB
 <li>Milk type: Eight categories. One null value.</li>
 <li>Milk treatment type: Three categories—raw milk, pasteurized, and thermised. 45 null values.</li>
 </ul>
-<p>Farmstead cheese utilizes milk that was produced in the same farm as the herds that produced the milk (Cheese Origin, 2022).  Artisanal cheese utilizes milk from several herds in close geographic proximity (Cheese Origin, 2022).</p>
+<p>Farmstead cheese utilizes milk that was produced in the same farm as the herds that produced the milk (Cheese Origin, 2022).  Artisanal cheese utilizes milk from several herds in close geographic proximity.</p>
 <p>Moisture percent is a numerical feature so addressing the null values can be with imputation using “median” strategy. Category type, milk type, and milk treatment type are categorical features; imputation using “most_frequent” strategy can address the null values. This is shown in detail in the next section: “Methods and Results.”</p>
 <p>Repeat plots are an effective way to see trends in data. Removing the # from the last line in the next two cells can display the numerical and categorical repeat plots, respectively. The most noteworthy trends (in my opinion) are in the upcoming two interactive visualizations.</p>
 
@@ -15068,7 +15068,7 @@ memory usage: 74.0+ KB
 <span class="n">alt</span><span class="o">.</span><span class="n">Size</span><span class="p">(</span>
     <span class="s2">&quot;count()&quot;</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">legend</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
-    <span class="n">width</span> <span class="o">=</span> <span class="mi">120</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
+    <span class="n">width</span> <span class="o">=</span> <span class="mi">120</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">120</span><span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
     <span class="n">column</span> <span class="o">=</span> <span class="n">ctg_columns</span><span class="p">,</span> <span class="n">row</span> <span class="o">=</span> <span class="n">ctg_columns</span><span class="p">)</span><span class="o">.</span><span class="n">resolve_scale</span><span class="p">(</span>
     <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;independent&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="s2">&quot;independent&quot;</span><span class="p">)</span>
 
@@ -15140,12 +15140,12 @@ memory usage: 74.0+ KB
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-0a2405380051453ca816a28923a99da3"></div>
+<div id="altair-viz-de16db69f87d4fa1aaa3a8bfb4989c7b"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0a2405380051453ca816a28923a99da3") {
-      outputDiv = document.getElementById("altair-viz-0a2405380051453ca816a28923a99da3");
+    if (outputDiv.id !== "altair-viz-de16db69f87d4fa1aaa3a8bfb4989c7b") {
+      outputDiv = document.getElementById("altair-viz-de16db69f87d4fa1aaa3a8bfb4989c7b");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15266,12 +15266,12 @@ memory usage: 74.0+ KB
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-814f2b993b414c3196ba00eac7da6274"></div>
+<div id="altair-viz-1caec0b9049b454cac585ca103cfcaf4"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-814f2b993b414c3196ba00eac7da6274") {
-      outputDiv = document.getElementById("altair-viz-814f2b993b414c3196ba00eac7da6274");
+    if (outputDiv.id !== "altair-viz-1caec0b9049b454cac585ca103cfcaf4") {
+      outputDiv = document.getElementById("altair-viz-1caec0b9049b454cac585ca103cfcaf4");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15571,23 +15571,23 @@ Categorical Features: [&#39;ManufacturerProvCode&#39;, &#39;ManufacturingTypeEn&
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>             LogisticRegressio Imbalanced
-fit_time                           0.0454
-score_time                         0.0086
+fit_time                           0.0446
+score_time                         0.0088
 test_score                         0.7764
 train_score                        0.7963
              KNeighborsClassif Imbalanced
-fit_time                           0.0176
-score_time                         0.0192
+fit_time                           0.0175
+score_time                         0.0191
 test_score                         0.8175
 train_score                        0.8704
              SupportVectorClas Imbalanced
-fit_time                           0.0336
-score_time                         0.0111
+fit_time                           0.0356
+score_time                         0.0117
 test_score                         0.7847
 train_score                        0.8316
              DecisionTreeClass Imbalanced
-fit_time                           0.0202
-score_time                         0.0085
+fit_time                           0.0203
+score_time                         0.0083
 test_score                         0.7942
 train_score                        0.9468
 </pre>
@@ -15665,17 +15665,17 @@ train_score                        0.9468
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>             LogisticRegressio Balanced
-fit_time                         0.0443
-score_time                       0.0085
+fit_time                         0.0455
+score_time                       0.0083
 test_score                       0.7586
 train_score                      0.7726
              SupportVectorClas Balanced
-fit_time                         0.0343
-score_time                       0.0112
+fit_time                         0.0337
+score_time                       0.0111
 test_score                       0.7888
 train_score                      0.8302
              DecisionTreeClass Balanced
-fit_time                         0.0212
+fit_time                         0.0206
 score_time                       0.0083
 test_score                       0.7914
 train_score                      0.9468
@@ -15690,7 +15690,7 @@ train_score                      0.9468
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In this case, addressing the imbalance results in a) a decrease in accuracy for Logistic Regression by 0.0178 (or 1.78%), b) an increase in accuracy for SVC by 0.0041 (or 0.41%), and c) a decrease in accuracy for the Decision Tree Classifier by 0.0028 (or 0.28%)." The change is minimal for the last two models.</p>
+<p>In this case, addressing the imbalance results in a) a decrease in accuracy for Logistic Regression by 0.0178 (or 1.78%), b) an increase in accuracy for SVC by 0.0041 (or 0.41%), and c) a decrease in accuracy for the Decision Tree Classifier by 0.0028 (or 0.28%). The change is minimal for the last two models.</p>
 <p>The cross-validation accuracy scores, ranked in descending order, are Decision Tree Classifier, SVC, and Logistic Regression. The following cell presents recall (instead of accuracy) as the scoring metric. Minimizing the number of cases where higher fat cheese is wrongly classified is of particular interest in this project—recall score metric is suitable for this task.</p>
 
 </div>
@@ -15764,13 +15764,13 @@ train_score                      0.9468
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>             LogisticRegressio Balanced Recall
-fit_time                                0.0449
+fit_time                                0.0452
 score_time                              0.0097
 test_score                              0.7475
 train_score                             0.7829
              SupportVectorClas Balanced Recall
-fit_time                                0.0336
-score_time                              0.0126
+fit_time                                0.0333
+score_time                              0.0125
 test_score                              0.8368
 train_score                             0.8857
              DecisionTreeClass Balanced Recall
@@ -15851,7 +15851,7 @@ Fitting 5 folds for each of 5 candidates, totalling 25 fits
 Fitting 5 folds for each of 5 candidates, totalling 25 fits
 Fitting 5 folds for each of 5 candidates, totalling 25 fits
              DecisionTreeClass Recall Tuned
-fit_time                             0.7825
+fit_time                             0.7807
 score_time                           0.0096
 test_score                           0.8176
 train_score                          0.9167
@@ -15926,8 +15926,8 @@ Fitting 5 folds for each of 9 candidates, totalling 45 fits
 Fitting 5 folds for each of 9 candidates, totalling 45 fits
 Fitting 5 folds for each of 9 candidates, totalling 45 fits
              SupportVectorClas Recall Tuned
-fit_time                             1.9824
-score_time                           0.0143
+fit_time                             1.9836
+score_time                           0.0141
 test_score                           0.8374
 train_score                          0.8420
 Accuracy: 0.69
@@ -16002,7 +16002,7 @@ Fitting 5 folds for each of 5 candidates, totalling 25 fits
 Fitting 5 folds for each of 5 candidates, totalling 25 fits
 Fitting 5 folds for each of 5 candidates, totalling 25 fits
              Logistic Regression Recall Tuned
-fit_time                               1.5807
+fit_time                               1.5793
 score_time                             0.0095
 test_score                             0.7397
 train_score                            0.7790
@@ -16084,7 +16084,7 @@ Accuracy: 0.7695
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>For Decision Tree Classifier, the best mean validation score is 0.8100, with an accuracy score of 0.8711. For SVC, the best mean validation score is 0.8529, with an accuracy score of 0.6900. For Logistic Regression, the best mean validation score is 0.7436, with an accuracy score of 0.7695.</p>
-<p>Among the models, the Decision Tree Classifier emerges as the most encouraging option. It has been fine-tuned to prioritize recall, yet it also performs commendably in terms of accuracy. On the contrary, selecting the Support Vector Classifier (SVC) proves to be less ideal. Although it achieves a high mean validation recall score, there is a notable trade-off in terms of accuracy.</p>
+<p>Among the models, the Decision Tree Classifier emerges as the most encouraging option. It has been fine-tuned to prioritize recall, yet it also performs well in terms of accuracy. On the contrary, selecting the Support Vector Classifier (SVC) proves to be less ideal. Although it achieves a high mean validation recall score, there is a notable trade-off in terms of accuracy.</p>
 <p>The best validation score achieved by the selected model with optimized hyperparameters, named “random_tree_tuning,” is 0.81. The details of the pipeline are shown above.</p>
 
 </div>
