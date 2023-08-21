@@ -14817,7 +14817,7 @@ memory usage: 74.0+ KB
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The table above displays the count of non-null values and the data type (dtype) of each column in the dataset. The “CheeseId” column has been removed as it does not provide any useful information for machine learning. Additionally, the columns "FlavourEn," "CharacteristicsEn," "RindTypeEn," and "CheeseName" contain more than 20% null values, resulting in their exclusion from the project. The following code demonstrates how this dropping process is carried out.</p>
+<p>The table above displays the count of non-null values and the data type (dtype) of each column in the dataset. The “CheeseId” column has been removed as it does not provide any useful information for machine learning. Additionally, the columns "FlavourEn," "CharacteristicsEn," and "RindTypeEn" contain more than 20% null values, resulting in their exclusion from the project. Finally, "CheeseName" has been removed since I am not utilizing CountVectorizer for this project.  The following code demonstrates how this dropping process is carried out.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14827,6 +14827,7 @@ memory usage: 74.0+ KB
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Dropping lower than 80% non-null values</span>
+<span class="c1"># Dropping Cheese Name </span>
 <span class="n">cheese</span> <span class="o">=</span> <span class="n">cheese</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;FlavourEn&quot;</span><span class="p">,</span> <span class="s2">&quot;CharacteristicsEn&quot;</span><span class="p">,</span> <span class="s2">&quot;RindTypeEn&quot;</span><span class="p">,</span> <span class="s2">&quot;CheeseName&quot;</span><span class="p">])</span>
 <span class="n">cheese</span>
 <span class="c1"># Splitting the data again after column drops</span>
@@ -15140,12 +15141,12 @@ memory usage: 74.0+ KB
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-15f07a5125bc4702964ecc2ba4c04b0f"></div>
+<div id="altair-viz-5e34a5a4b4164ffe984de1675f3da24c"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-15f07a5125bc4702964ecc2ba4c04b0f") {
-      outputDiv = document.getElementById("altair-viz-15f07a5125bc4702964ecc2ba4c04b0f");
+    if (outputDiv.id !== "altair-viz-5e34a5a4b4164ffe984de1675f3da24c") {
+      outputDiv = document.getElementById("altair-viz-5e34a5a4b4164ffe984de1675f3da24c");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15266,12 +15267,12 @@ memory usage: 74.0+ KB
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-f22f5637bd7c414db57f7ec2c1e3e064"></div>
+<div id="altair-viz-388745914383421e84af72536e690179"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-f22f5637bd7c414db57f7ec2c1e3e064") {
-      outputDiv = document.getElementById("altair-viz-f22f5637bd7c414db57f7ec2c1e3e064");
+    if (outputDiv.id !== "altair-viz-388745914383421e84af72536e690179") {
+      outputDiv = document.getElementById("altair-viz-388745914383421e84af72536e690179");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15413,7 +15414,7 @@ Name: FatLevel, dtype: float64</pre>
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>fit_time       0.0014
-score_time     0.0013
+score_time     0.0012
 test_score     0.5144
 train_score    0.5480
 dtype: float64</pre>
@@ -15428,7 +15429,7 @@ dtype: float64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The previous section displays an overview of the seven columns included in the feature table, which the model uses for training to predict a fat class. The reason the remaining features were dropped, while already explained in greater detail in the previous section, are the completeness and usefulness of the data (e.g., “CheeseId”). Furthermore, the column dtypes are demonstrated in the table with the non-null values. The code below divides the seven columns into two categories—numerical and categorical. “Organic” includes 0’s and 1’s, which makes it binary in nature; however, for machine learning preprocessing purposes, it is a numerical feature. The target column “Fat Level” is binary and needs not be preprocessed.</p>
+<p>The previous section displays an overview of the seven columns included in the feature table, which the model uses for training to predict a fat class. The column dtypes are demonstrated in the table with the non-null values. The code below divides the seven columns into two categories—numerical and categorical. “Organic” includes 0’s and 1’s, which makes it binary in nature; however, for machine learning preprocessing purposes, it is a numerical feature. The target column “Fat Level” is binary and needs not be preprocessed.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15571,23 +15572,23 @@ Categorical Features: [&#39;ManufacturerProvCode&#39;, &#39;ManufacturingTypeEn&
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>             LogisticRegressio Imbalanced
-fit_time                           0.0467
-score_time                         0.0092
+fit_time                           0.0471
+score_time                         0.0086
 test_score                         0.7764
 train_score                        0.7963
              KNeighborsClassif Imbalanced
-fit_time                           0.0180
-score_time                         0.0191
+fit_time                           0.0184
+score_time                         0.0195
 test_score                         0.8175
 train_score                        0.8704
              SupportVectorClas Imbalanced
-fit_time                           0.0329
-score_time                         0.0110
+fit_time                           0.0322
+score_time                         0.0108
 test_score                         0.7847
 train_score                        0.8316
              DecisionTreeClass Imbalanced
-fit_time                           0.0200
-score_time                         0.0085
+fit_time                           0.0195
+score_time                         0.0082
 test_score                         0.7942
 train_score                        0.9468
 </pre>
@@ -15665,18 +15666,18 @@ train_score                        0.9468
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>             LogisticRegressio Balanced
-fit_time                         0.0453
-score_time                       0.0082
+fit_time                         0.0429
+score_time                       0.0080
 test_score                       0.7586
 train_score                      0.7726
              SupportVectorClas Balanced
-fit_time                         0.0336
-score_time                       0.0110
+fit_time                         0.0334
+score_time                       0.0114
 test_score                       0.7888
 train_score                      0.8302
              DecisionTreeClass Balanced
-fit_time                         0.0204
-score_time                       0.0082
+fit_time                         0.0202
+score_time                       0.0080
 test_score                       0.7914
 train_score                      0.9468
 </pre>
@@ -15765,17 +15766,17 @@ train_score                      0.9468
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>             LogisticRegressio Balanced Recall
 fit_time                                0.0436
-score_time                              0.0096
+score_time                              0.0094
 test_score                              0.7475
 train_score                             0.7829
              SupportVectorClas Balanced Recall
-fit_time                                0.0333
-score_time                              0.0125
+fit_time                                0.0329
+score_time                              0.0122
 test_score                              0.8368
 train_score                             0.8857
              DecisionTreeClass Balanced Recall
-fit_time                                0.0204
-score_time                              0.0096
+fit_time                                0.0201
+score_time                              0.0097
 test_score                              0.7516
 train_score                             0.9593
 </pre>
@@ -15851,8 +15852,8 @@ Fitting 5 folds for each of 5 candidates, totalling 25 fits
 Fitting 5 folds for each of 5 candidates, totalling 25 fits
 Fitting 5 folds for each of 5 candidates, totalling 25 fits
              DecisionTreeClass Recall Tuned
-fit_time                             0.7789
-score_time                           0.0095
+fit_time                             0.7665
+score_time                           0.0093
 test_score                           0.8176
 train_score                          0.9167
 Accuracy: 0.8711
@@ -15926,8 +15927,8 @@ Fitting 5 folds for each of 9 candidates, totalling 45 fits
 Fitting 5 folds for each of 9 candidates, totalling 45 fits
 Fitting 5 folds for each of 9 candidates, totalling 45 fits
              SupportVectorClas Recall Tuned
-fit_time                             1.9794
-score_time                           0.0141
+fit_time                             1.9578
+score_time                           0.0139
 test_score                           0.8374
 train_score                          0.8420
 Accuracy: 0.69
@@ -16002,8 +16003,8 @@ Fitting 5 folds for each of 5 candidates, totalling 25 fits
 Fitting 5 folds for each of 5 candidates, totalling 25 fits
 Fitting 5 folds for each of 5 candidates, totalling 25 fits
              Logistic Regression Recall Tuned
-fit_time                               1.5823
-score_time                             0.0094
+fit_time                               1.5633
+score_time                             0.0093
 test_score                             0.7397
 train_score                            0.7790
 Accuracy: 0.7695
